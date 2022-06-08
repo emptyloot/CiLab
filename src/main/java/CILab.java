@@ -1,3 +1,5 @@
+/*David Caldwell, CS410, Assignment: CiLab */
+
 public class CILab implements CILabInterface {
     private String myString;
 
