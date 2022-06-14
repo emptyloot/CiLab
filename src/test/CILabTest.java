@@ -42,28 +42,33 @@ public class CILabTest {
     
     public void detectAllLowerCase() {
     	//Verify all lower case letter string returns true
-    	assertTrue("Not yet implemented");
+    	myString.setString("alllowercasestring");
+    	assertTrue(myString.detectCapitalUse());
     }
     
     @Test
     public void detectAllCapitalUseTestAllCapitals() {
     	//Verify all capital case letter string return true
-    	assertTrue("Not yet implemented");
+    	myString.setString("ALLCAPITALSTRING");
+    	assertTrue(myString.detectCapitalUse());
     }
     
     public void detectFirstCapitalUseTestAllCapitals1() {
     	//Verify all Only first letter is capital case in string return true
-    	assertTrue("Not yet implemented");
+    	myString.setString("Onlyfirstlettercapital");
+    	assertTrue(myString.detectCapitalUse());
     }
     
     public void detectOneCapitalNotInFirst() {
     	//Verify one capital letter not in first place inside of lower case string returns false
-    	assertTrue("Not yet implemented");
+    	myString.setString("oneCapitalletternotfirst");
+    	assertFalse(myString.detectCapitalUse());
     }
 
     public void DetectAllCapitalAndOneLower() {
     	//Verify one lower case fails an all upper case string
-    	assertTrue("Not yet implemented");
+    	myString.setString("ONElOWERCASE");
+    	assertTrue(myString.detectCapitalUse());
     }
 
 }
