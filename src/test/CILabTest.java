@@ -30,13 +30,14 @@ public class CILabTest {
     @Test
     public void verifyRetrunNullString() {
     	//Verify object init string as null
-    	assertTrue("Not yet implemented");
+    	assertNull(myString.getString());
     }
     
     @Test
     public void verifyRetrunSameString() {
     	//Verify setString changes string from null and then getString returns the same string
-    	assertTrue("Not yet implemented");
+    	myString.setString("Not Null String");
+    	assertEquals("Not Null String",myString.getString());
     }
     
     public void detectAllLowerCase() {
