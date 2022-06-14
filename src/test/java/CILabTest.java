@@ -30,45 +30,45 @@ public class CILabTest {
     @Test
     public void verifyRetrunNullString() {
     	//Verify object init string as null
-    	assertNull(myString.getString());
+    	Assertions.assertNull(myString.getString());
     }
     
     @Test
     public void verifyRetrunSameString() {
     	//Verify setString changes string from null and then getString returns the same string
     	myString.setString("Not Null String");
-    	assertEquals("Not Null String",myString.getString());
+    	Assertions.assertEquals("Not Null String",myString.getString());
     }
-    
+    @Test
     public void detectAllLowerCase() {
     	//Verify all lower case letter string returns true
     	myString.setString("alllowercasestring");
-    	assertTrue(myString.detectCapitalUse());
+    	Assertions.assertTrue(myString.detectCapitalUse());
     }
     
     @Test
     public void detectAllCapitalUseTestAllCapitals() {
     	//Verify all capital case letter string return true
     	myString.setString("ALLCAPITALSTRING");
-    	assertTrue(myString.detectCapitalUse());
+    	Assertions.assertTrue(myString.detectCapitalUse());
     }
-    
+    @Test
     public void detectFirstCapitalUseTestAllCapitals1() {
     	//Verify all Only first letter is capital case in string return true
     	myString.setString("Onlyfirstlettercapital");
-    	assertTrue(myString.detectCapitalUse());
+    	Assertions.assertTrue(myString.detectCapitalUse());
     }
-    
+    @Test
     public void detectOneCapitalNotInFirst() {
     	//Verify one capital letter not in first place inside of lower case string returns false
     	myString.setString("oneCapitalletternotfirst");
-    	assertFalse(myString.detectCapitalUse());
+    	Assertions.assertFalse(myString.detectCapitalUse());
     }
-
+    @Test
     public void DetectAllCapitalAndOneLower() {
     	//Verify one lower case fails an all upper case string
     	myString.setString("ONElOWERCASE");
-    	assertTrue(myString.detectCapitalUse());
+    	Assertions.assertTrue(myString.detectCapitalUse());
     }
 
 }
