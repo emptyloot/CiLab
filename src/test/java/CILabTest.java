@@ -66,9 +66,9 @@ public class CILabTest {
     }
     @Test
     public void DetectAllCapitalAndOneLower() {
-    	//Verify one lower case fails an all upper case string
+    	//Verify one lower case and all upper case string returns false
     	myString.setString("ONElOWERCASE");
-    	Assertions.assertTrue(myString.detectCapitalUse());
+    	Assertions.assertFalse(myString.detectCapitalUse());
     }
 
 }

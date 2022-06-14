@@ -34,7 +34,7 @@ public class CILab implements CILabInterface {
     }
     
     private boolean isLowerCase(String text) {
-    	return text.equals(myString.toLowerCase());
+    	return text.equals(text.toLowerCase());
     }
 
 }
